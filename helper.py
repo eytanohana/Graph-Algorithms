@@ -38,3 +38,10 @@ def draw_graph(G):
 
     plt.axis('off')
     plt.show()
+    
+def clear_marks(G):
+    for node in G.nodes:
+        G.nodes[node]['marked'] = False
+    for edge in G.edges:
+        G.edges[edge]['marked'] = False
+    
