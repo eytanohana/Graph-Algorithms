@@ -9,7 +9,7 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytan-ohana/Gra
 - [DFS](DFS.ipynb)
 
 A graph is a type of data structure that represented by a set of nodes/vertices and edges.  
-<img src="static/graph.png" width="80%"/>
+<img src="static/graph.png" width="70%"/>
 
 Graphs can be used to model many complex things like social networks where individuals are the nodes and connections between friends are the edges. 
 
