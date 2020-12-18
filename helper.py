@@ -31,6 +31,7 @@ def draw_graph(G):
     nx.draw_networkx_edges(G, pos,
                            edgelist=unmarked_edges,
                            edge_color='k',
+                           alpha=0.4,
                            width=1)
     
     labels = {n: n for n in G.nodes}
