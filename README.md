@@ -4,6 +4,10 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytan-ohana/Gra
 
 ---
 
+## Table of Contents
+- [BFS](BFS.ipynb)
+- [DFS](DFS.ipynb)
+
 A graph is a type of data structure that represented by a set of nodes/vertices and edges.  
 <img src="static/graph.png"/>
 
