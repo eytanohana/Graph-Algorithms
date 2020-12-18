@@ -9,7 +9,6 @@ def draw_graph(G):
             
     marked_edges = [e for e, attrs in G.edges.items() if attrs.get('marked', False) == True]    
     unmarked_edges = list(set(G.edges) - set(marked_edges))
-    print(unmarked_edges)
     
     pos = nx.spring_layout(G) # positions for all nodes
 
