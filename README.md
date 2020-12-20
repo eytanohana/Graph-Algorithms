@@ -27,6 +27,12 @@ In graph theory, vertices can accessed by computing a graph traversal. A graph t
 
 An important property of graphs to discuss before further discussing traversals is the concept of graph connectivity. Two vertices *u* and *v* are connected if there exists a path between them.
 
+A graph is called a connected graph if vertex has a path to every other vertex.
+
+A graph is called completely connected if every vertex is connected to every other vertex by a single edge.
+
+
+
 
 * Basic Traversals - Topological Sort
 * Trees - explanation
