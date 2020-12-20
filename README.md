@@ -33,7 +33,12 @@ A graph is called completely connected if every vertex is connected to every oth
 
 <img src="static/complete-graph.png" width="30%"/>
 
+Another important topic in graph theory are trees. A tree is an undirected connecte graph that doesn't contain any cycles. Trees have a few characteristic properties. A graph is a tree if it has the following properties:
 
+1. It is connected and has no cycles.
+1. If any edge is added to the graph, a cycle will be formed.
+1. For every two vertices there is a unique path (composed of unique edges) between them.
+1. If any edge is removed from the graph, then the graph won't be connected anymore.
 
 
 * Basic Traversals - Topological Sort
