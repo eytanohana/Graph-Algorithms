@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-def draw_graph(G):
+def draw_graph(G, with_labels=True):
     
     marked_nodes = [node for node, attrs in G.nodes.items() if attrs.get('marked', False) == True]
     unmarked_nodes = list(set(G.nodes) - set(marked_nodes))
@@ -33,8 +33,9 @@ def draw_graph(G):
                            edge_color='k',
                            width=1)
     
-    labels = {n: n for n in G.nodes}
-    nx.draw_networkx_labels(G,pos,labels,font_size=16)
+    if with_labels:
+        labels = {n: n for n in G.nodes}
+        nx.draw_networkx_labels(G,pos,labels,font_size=16)
 
     plt.axis('off')
     plt.show()
