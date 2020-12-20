@@ -19,8 +19,11 @@ Additionally edges can be weighted which in the case of nav systems can be repre
 
 In graph theory, vertices can accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A path is sequence of non-repeating vertices connected by unique edges. A cycle is a path where the start and end vertices are the same.
 
-<img src="static/path-graph.png" width="30%" style="display: inline"/>
-<img src="static/cycle-graph.png" width="30%"/>
+<p float="left">
+ <img src="static/path-graph.png" width="30%"/>
+ <img src="static/cycle-graph.png" width="30%"/>
+</p>
+
 
 An important property of graphs to discuss before further discussing traversals is the concept of graph connectivity. Two vertices *u* and *v* are connected if there exists a path between them.
 
