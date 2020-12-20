@@ -31,6 +31,8 @@ A graph is called a connected graph if vertex has a path to every other vertex.
 
 A graph is called completely connected if every vertex is connected to every other vertex by a single edge.
 
+<img src="static/complete-graph.png" width="30%"/>
+
 
 
 
