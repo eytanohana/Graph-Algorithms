@@ -17,7 +17,7 @@ Graphs and Graph algorithms are also widely used in navigation systems like goog
 
 Additionally edges can be weighted which in the case of nav systems can be represent some sort of measure for how long the road (edge) from point a to point b is, which can take in to account physical distance, traffic conditions, and other factors.
 
-In graph theory, vertices can accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A path is sequence of non-repeating vertices connected by unique edges. A cycle is a path where the start and end vertices are the same.
+In graph theory, vertices can accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A path is sequence of non-repeating vertices connected by unique edges. A cycle is a path where the start and end vertices are the same. The left image displays a path and the right image is a cycle.
 
 <p float="left">
  <img src="static/path-graph.png" width="30%"/>
@@ -42,11 +42,16 @@ Another important topic in graph theory are trees. A tree is an undirected conne
 
 <img src="static/simple-tree.png" width="30%"/>
 
-In graph theory an important topic is finding spanning trees of graphs. A spanning tree for a graph is just the set of edges in the graph that form a tree and contains every node in the graph.
+In graph theory, an important topic is finding a spanning tree of a graph. A spanning tree is a minimun set of edges that connects every node in the graph. A graph can only have a spanning tree if it is connected. 
 
 <img src="static/tree-graph.png" width="30%"/>
 
-The graph above consists of all the nodes and edges both pink and black. The spanning tree consists only of the nodes and pink edges.
+The spanning tree of the graph above consists of only of the pink edges and all of the nodes. Spanning trees are vital in any path-finding algorithm such as GPS where finding the shortest path is the goal.
+
+Two simple algorithms for finding a spanning tree are the [depth-first search](DFS.ipynb) and [breadth-first search](BFS.ipynb) algorithms. When ran on any vertex in an __undirected unweighted__ graph, BFS and DFS determine the shortest path from the start vertex to any other vertex in the graph. 
+
+
+
 
 
 * Basic Traversals - Topological Sort
