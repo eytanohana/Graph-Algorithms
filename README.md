@@ -17,4 +17,20 @@ Graphs and Graph algorithms are also widely used in navigation systems like goog
 
 Additionally edges can be weighted which in the case of nav systems can be represent some sort of measure for how long the road (edge) from point a to point b is, which can take in to account physical distance, traffic conditions, and other factors.
 
+In graph theory, vertices can accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. 
+
+
+* Basic Traversals - Topological Sort
+* Trees - explanation
+* Spanning Trees i.e. BFS and DFS Traversals
+ - single shortest path
+* Dijkstras Algo
+* Graph Connectivity
+* Connected Components
+* Common Graph
+* Euler Trails and Circuit - Fleury's Algo
+* Hamiltonian Cycles 
+ -  maybe Planarity
+* Graph Coloring
+
 Graphs are applicable in so many situations that thousands of algorithms have been developed for them. Algorithms like shortest path, spanning trees, graph traversals, topological sorts and more. 
