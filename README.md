@@ -40,6 +40,8 @@ Another important topic in graph theory are trees. A tree is an undirected conne
 1. For every two vertices there is a unique path (composed of unique edges) between them.
 1. If any edge is removed from the graph, then the graph won't be connected anymore.
 
+<img src="static/simple-tree.png" width="30%"/>
+
 
 * Basic Traversals - Topological Sort
 * Trees - explanation
