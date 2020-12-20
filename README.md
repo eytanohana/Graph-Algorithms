@@ -17,7 +17,9 @@ Graphs and Graph algorithms are also widely used in navigation systems like goog
 
 Additionally edges can be weighted which in the case of nav systems can be represent some sort of measure for how long the road (edge) from point a to point b is, which can take in to account physical distance, traffic conditions, and other factors.
 
-In graph theory, vertices can accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. 
+In graph theory, vertices can accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A path is sequence of non-repeating vertices connected by unique edges. A cycle is a path where the start and end vertices are the same.
+
+An important property of graphs to discuss before further discussing traversals is the concept of graph connectivity. Two vertices *u* and *v* are connected if there exists a path between them.
 
 
 * Basic Traversals - Topological Sort
