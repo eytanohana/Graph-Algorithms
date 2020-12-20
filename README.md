@@ -44,6 +44,10 @@ Another important topic in graph theory are trees. A tree is an undirected conne
 
 In graph theory an important topic is finding spanning trees of graphs. A spanning tree for a graph is just the set of edges in the graph that form a tree and contains every node in the graph.
 
+<img src="static/tree-graph.png" width="30%"/>
+
+The graph above consists of all the nodes and edges both pink and black. The spanning tree consists only of the nodes and pink edges.
+
 
 * Basic Traversals - Topological Sort
 * Spanning Trees i.e. BFS and DFS Traversals
