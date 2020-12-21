@@ -15,7 +15,7 @@ def draw_graph(G, with_labels=True, with_tree=True):
         nx.draw_networkx_nodes(G, pos,
                            nodelist=marked_nodes,
                            node_color='#FF00FF',
-                           node_size=500)
+                           node_size=400)
 
         nx.draw_networkx_edges(G, pos,
                             edgelist=marked_edges,
@@ -25,7 +25,7 @@ def draw_graph(G, with_labels=True, with_tree=True):
         nx.draw_networkx_nodes(G, pos,
                            nodelist=unmarked_nodes,
                            node_color='#7EFF67',
-                           node_size=500)
+                           node_size=400)
 
         nx.draw_networkx_edges(G, pos,
                                edgelist=unmarked_edges,
@@ -35,7 +35,7 @@ def draw_graph(G, with_labels=True, with_tree=True):
         nx.draw_networkx_nodes(G, pos,
                            nodelist=unmarked_nodes + marked_nodes,
                            node_color='#7EFF67',
-                           node_size=500)      
+                           node_size=400)      
         
         nx.draw_networkx_edges(G, pos,
                                edgelist=unmarked_edges + marked_edges,
@@ -44,7 +44,7 @@ def draw_graph(G, with_labels=True, with_tree=True):
     
     if with_labels:
         labels = {n: n for n in G.nodes}
-        nx.draw_networkx_labels(G,pos,labels,font_size=16)
+        nx.draw_networkx_labels(G,pos,labels,font_size=14)
 
     plt.axis('off')
     plt.show()
