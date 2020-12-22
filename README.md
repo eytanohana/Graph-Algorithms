@@ -10,7 +10,7 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Grap
 
 A graph is a type of data structure that is represented by a set of nodes/vertices and edges. 
 
-<div style="text-align:center"><img src="static/graph.png" width="60%"/></div>
+<img src="static/graph.png" width="60%"/>
 
 Graphs can be used to model many complex things like social networks where individuals are the nodes and connections between friends are the edges. 
 
@@ -20,7 +20,7 @@ Additionally edges can be weighted which in the case of nav systems can represen
 
 In graph theory, vertices can be accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A path is sequence of non-repeating vertices connected by unique edges. A cycle is a path where the start and end vertices are the same. The left image displays a path and the right image is a cycle.
 
-<p style="text-align:center">
+<p>
  <img src="static/path-graph.png" width="30%"/>
  <img src="static/cycle-graph.png" width="30%"/>
 </p>
@@ -59,7 +59,7 @@ For many algorithms, especially for digraphs, we need to know the __degree__ of 
 
 For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
 
-<p style='text-align:center'>
+<p>
 <img src="static/digraph.png" width="30%"/>
 <img src="static/selfloop.png" width="30%"/>
 </p>
