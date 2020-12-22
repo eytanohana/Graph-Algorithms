@@ -50,6 +50,22 @@ The spanning tree of the graph above consists of only the pink edges and nodes. 
 
 Two simple, yet effective, algorithms for finding a spanning tree are [depth-first search](DFS.ipynb) and [breadth-first search](BFS.ipynb). __When run on any vertex in an *undirected unweighted* graph, BFS and DFS determine the shortest path from the start vertex to any other vertex reachable in the graph.__ 
 
+Until now we have been talking about graphs with undirected edges. We also need to talk about graphs with directed edges, or __digraphs__, since they can be used to model many relationships that undirected graphs can't. Before we move any further, we need to clear up some terminology.
+
+For many algorithms, especially for digraphs, we need to know the __degree__ of a vertex. In an undirected graph, the degree of a vertex is just how many edges are connected to it (we count self loops twice). In a directed graph the __in-degree__ of a vertex is the number of incoming edges to the vertex while the __out-degree__ is the number of outgoing edges from the vertex.
+
+For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
+
+<p float="left">
+<img src="static/digraph.png" width="30%"/>
+<img src="static/selfloop.png" width="30%"/>
+</p>
+
+One such use case of a digraph is to solve the problem of scheduling tasks. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prereqisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
+
+The problem we want to solve is to find a natural ordering of the tasks so that each task done in order has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* in the graph than *u* preceeds *v* in the ordering, and *u* doesn't have to directly preceed *v*.
+
+<img src="static/clothing-topo.png" width="30%"/>
 
 * Basic Traversals - Topological Sort
 * Spanning Trees i.e. BFS and DFS Traversals
