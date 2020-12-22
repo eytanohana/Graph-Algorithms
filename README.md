@@ -8,7 +8,8 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Grap
 - [BFS](BFS.ipynb)
 - [DFS](DFS.ipynb)
 
-A graph is a type of data structure that is represented by a set of nodes/vertices and edges.  
+A graph is a type of data structure that is represented by a set of nodes/vertices and edges. 
+
 <img src="static/graph.png" width="60%"/>
 
 Graphs can be used to model many complex things like social networks where individuals are the nodes and connections between friends are the edges. 
@@ -19,7 +20,7 @@ Additionally edges can be weighted which in the case of nav systems can represen
 
 In graph theory, vertices can be accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A path is sequence of non-repeating vertices connected by unique edges. A cycle is a path where the start and end vertices are the same. The left image displays a path and the right image is a cycle.
 
-<p float="left">
+<p>
  <img src="static/path-graph.png" width="30%"/>
  <img src="static/cycle-graph.png" width="30%"/>
 </p>
@@ -50,6 +51,39 @@ The spanning tree of the graph above consists of only the pink edges and nodes. 
 
 Two simple, yet effective, algorithms for finding a spanning tree are [depth-first search](DFS.ipynb) and [breadth-first search](BFS.ipynb). __When run on any vertex in an *undirected unweighted* graph, BFS and DFS determine the shortest path from the start vertex to any other vertex reachable in the graph.__ 
 
+---
+
+Until now we have been talking about graphs with undirected edges. We also need to talk about graphs with directed edges, or __digraphs__, since they can be used to model many relationships that undirected graphs can't. Before we move any further, we need to clear up some terminology.
+
+For many algorithms, especially for digraphs, we need to know the __degree__ of a vertex. In an undirected graph, the degree of a vertex is just how many edges are connected to it (we count self loops twice). In a directed graph the __in-degree__ of a vertex is the number of incoming edges to the vertex while the __out-degree__ is the number of outgoing edges from the vertex.
+
+For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
+
+<p>
+<img src="static/digraph.png" width="30%"/>
+<img src="static/selfloop.png" width="30%"/>
+</p>
+
+One such use case of a digraph is to solve the problem of scheduling tasks. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prereqisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
+
+The problem we want to solve is to find a natural ordering of the tasks so that each task done in order has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* in the graph than *u* preceeds *v* in the ordering, and *u* doesn't have to directly preceed *v*.
+
+<img src="static/clothing-topo.png" width="30%"/>
+
+We can see there are many valid outputs for this digraph/problem:
+1. underwear, pants, socks, shoes, shirt, jacket
+1. underwear, shirt, jacket, pants, socks, shoes
+1. underwear, shirt, jacket, socks, pants, shoes
+1. socks, underwear, pants, shirt, shoes, jacket
+1. socks, underwear, pants, shoes, shirt, jacket
+
+and the list goes on.
+
+"underwear, pants, shoes, socks, shirt, jacket" would be invalid since shoes comes before socks in the order but socks points to shoes in the graph.
+
+The ordering we get is known as a topological sort of the graph and the algorithm that solves this problem is unsurprisingly called [Toposort](Topo-Sort.ipynb) and is actually a very simple algorithm to understand.
+
+---
 
 * Basic Traversals - Topological Sort
 * Spanning Trees i.e. BFS and DFS Traversals
