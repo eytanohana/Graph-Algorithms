@@ -70,6 +70,21 @@ The problem we want to solve is to find a natural ordering of the tasks so that 
 
 <img src="static/clothing-topo.png" width="30%"/>
 
+We can see there are many valid outputs for this digraph/problem:
+1. underwear, pants, socks, shoes, shirt, jacket
+1. underwear, shirt, jacket, pants, socks, shoes
+1. underwear, shirt, jacket, socks, pants, shoes
+1. socks, underwear, pants, shirt, shoes, jacket
+1. socks, underwear, pants, shoes, shirt, jacket
+
+and the list goes on.
+
+"underwear, pants, shoes, socks, shirt, jacket" would be invalid since shoes comes before socks in the order but socks points to shoes in the graph.
+
+The ordering we get is known as a topological sort of the graph and the algorithm that solves this problem is unsurprisingly called [Toposort](Topo-Sort.ipynb) and is actually a very simple algorithm to understand.
+
+---
+
 * Basic Traversals - Topological Sort
 * Spanning Trees i.e. BFS and DFS Traversals
  - single shortest path
