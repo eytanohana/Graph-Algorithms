@@ -8,8 +8,5 @@ dependencies:
   - matplotlib-base=3.3.3=py37h4f6019d_0
   - networkx=2.5=py_0
   - numpy=1.19.4=py37h7e9df27_1
-  - pandas=1.1.3=py37he6710b0_0
   - pip=20.3.1=py37h06a4308_0
   - python=3.7.9=h7579374_0
-  - scipy=1.5.2=py37habc2bb6_0
-  - seaborn=0.11.0=py_0
