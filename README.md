@@ -2,6 +2,8 @@
 
 This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Graph-Algorithms) and [Osher Boudara](https://github.com/osherboudara99/Graph-Algorithms) to implement and visualize various graph algorithms.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eytanohana/Graph-Algorithms/HEAD)
+
 ---
 
 ## Table of Contents
