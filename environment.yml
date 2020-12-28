@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - anaconda
   - defaults
-  - https://conda.anaconda.org/trax
 dependencies:
   - matplotlib=3.3.3=py37h89c1867_0
   - matplotlib-base=3.3.3=py37h4f6019d_0
