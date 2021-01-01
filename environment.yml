@@ -1,0 +1,12 @@
+name: graph-algos
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - matplotlib=3.3.3=py37h89c1867_0
+  - matplotlib-base=3.3.3=py37h4f6019d_0
+  - networkx=2.5=py_0
+  - numpy=1.19.4=py37h7e9df27_1
+  - pip=20.3.1=py37h06a4308_0
+  - python=3.7.9=h7579374_0
