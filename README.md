@@ -88,7 +88,6 @@ The ordering we get is known as a topological sort of the graph and the algorith
 
 ---
 
-* Spanning Trees i.e. BFS and DFS Traversals
  - single shortest path
 * Dijkstras Algo
 * Connected Components
