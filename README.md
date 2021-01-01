@@ -43,6 +43,16 @@ The adjacency list is a list/array of the nodes in the graph where each node poi
 
 The adjacency matrix is a matrix where each row represents a node and each column represents a node. We see in the matrix two nodes, *u* and *v*, are connected if the adj matrix at row *u* column *v* is non-zero. 
 
+<p>
+    <img src="static/adj-graph.png" width="30%"/>
+    <img src="static/adj-list.png" width="30%"/>
+    <img src="static/adj-matrix.png" width="30%"/>
+</p>
+
+In this case the adjacency matrix is symmetric around the main diagonal because the graph is undirected. If the graph had weights then the existence of an edge in the matrix would be represented by its weight instead of just 1.
+
+We will try to implement as many of these algorithms as we can using both the list and matrix representations of the graphs.
+
 Another important topic in graph theory are trees. A tree is an undirected connected graph that doesn't contain any cycles. Trees have a few characteristic properties. A graph is a tree if it has the following properties:
 
 1. It is connected and has no cycles.
