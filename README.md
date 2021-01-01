@@ -37,6 +37,12 @@ A graph is called completely connected if every vertex is connected to every oth
 
 <img src="static/complete-graph.png" width="30%"/>
 
+There are two common ways to represent a graph: the __adjacency list__ or the __adjacency matrix__.
+
+The adjacency list is a list/array of the nodes in the graph where each node points to a list of nodes adjacent to it.
+
+The adjacency matrix is a matrix where each row represents a node and each column represents a node. We see in the matrix two nodes, *u* and *v*, are connected if the adj matrix at row *u* column *v* is non-zero. 
+
 Another important topic in graph theory are trees. A tree is an undirected connected graph that doesn't contain any cycles. Trees have a few characteristic properties. A graph is a tree if it has the following properties:
 
 1. It is connected and has no cycles.
