@@ -103,6 +103,11 @@ and the list goes on.
 
 The ordering we get is known as a topological sort of the graph and the algorithm that solves this problem is unsurprisingly called [Toposort](Topo-Sort.ipynb) and is actually a very simple algorithm to understand.
 
+
+## Pathfinding algorithms
+
+There are many path finding algorithms out there. They all come in different flavors. Some are single source shortest path algorithms that find the shortest path from a single vertex to every other vertex in the graph. Others are all-pair shortest paths algorithms which find the shortest path from any vertext to any other vertex in a graph.
+
 ---
 
  - single shortest path
