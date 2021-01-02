@@ -10,6 +10,7 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Grap
 - [BFS](BFS.ipynb)
 - [DFS](DFS.ipynb)
 - [TopoSort](Topo-Sort.ipynb)
+- [Dijkstras algorithm](Dijkstras-Algo.ipynb)
 
 A graph is a type of data structure that is represented by a set of nodes/vertices and edges. 
 
