@@ -108,15 +108,5 @@ The ordering we get is known as a topological sort of the graph and the algorith
 
 There are many path finding algorithms out there. They all come in different flavors. Some are single source shortest path algorithms that find the shortest path from a single vertex to every other vertex in the graph. Others are all-pair shortest paths algorithms which find the shortest path from any vertext to any other vertex in a graph.
 
----
-
- - single shortest path
-* Dijkstras Algo
-* Connected Components
-* Common Graph
-* Euler Trails and Circuit - Fleury's Algo
-* Hamiltonian Cycles 
- -  maybe Planarity
-* Graph Coloring
 
 Graphs are applicable in so many situations that thousands of algorithms have been developed for them. Algorithms like shortest path, spanning trees, graph traversals, topological sorts and more. 
