@@ -7,10 +7,10 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Grap
 ---
 
 ## Table of Contents
-- [BFS](BFS.ipynb)
-- [DFS](DFS.ipynb)
-- [TopoSort](Topo-Sort.ipynb)
-- [Dijkstras algorithm](Dijkstras-Algo.ipynb)
+- [Breadth First Search](BFS.ipynb)
+- [Depth First Search](DFS.ipynb)
+- [Topological Sort](Topo-Sort.ipynb)
+- [Dijkstra's Algorithm](Dijkstras-Algo.ipynb)
 
 A graph is a type of data structure that is represented by a set of nodes/vertices and edges. 
 
@@ -73,9 +73,9 @@ Two simple, yet effective, algorithms for finding a spanning tree are [depth-fir
 
 ---
 
-Until now we have been talking about graphs with undirected edges. We also need to talk about graphs with directed edges, or __digraphs__, since they can be used to model many relationships that undirected graphs can't. Before we move any further, we need to clear up some terminology.
+Until now we have been talking about graphs with undirected edges. We also need to talk about graphs with directed edges, or __digraphs__, since they can be used to model many relationships that undirected graphs can't. 
 
-For many algorithms, especially for digraphs, we need to know the __degree__ of a vertex. In an undirected graph, the degree of a vertex is just how many edges are connected to it (we count self loops twice). In a directed graph the __in-degree__ of a vertex is the number of incoming edges to the vertex while the __out-degree__ is the number of outgoing edges from the vertex.
+For many algorithms, especially for digraphs, we need to know the __degree__ of a vertex. In an undirected graph, the degree of a vertex is just how many edges are connected to it (we count self loops twice). In a directed graph, the __in-degree__ of a vertex is the number of incoming edges to the vertex while the __out-degree__ is the number of outgoing edges from the vertex.
 
 For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
 
@@ -84,11 +84,11 @@ For example in the graphs below node 3 (left) has an in-degree of 2 and an out-d
 <img src="static/selfloop.png" width="30%"/>
 </p>
 
-One such use case of a digraph is to solve the problem of scheduling tasks. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prereqisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
-
-The problem we want to solve is to find a natural ordering of the tasks so that each task done in order has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* in the graph than *u* preceeds *v* in the ordering, and *u* doesn't have to directly preceed *v*.
+One application where digraphs are used is to solve the problem of task scheduling. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prerequisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
 
 <img src="static/clothing-topo.png" width="30%"/>
+
+A problem we want to solve is to find a natural ordering of the tasks or in this case, putting on clothes, so that each task done has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* or there is a directed path from *u* to *v* in the graph then *u* preceeds *v* in the ordering.
 
 We can see there are many valid outputs for this digraph/problem:
 1. underwear, pants, socks, shoes, shirt, jacket
@@ -103,10 +103,10 @@ and the list goes on.
 
 The ordering we get is known as a topological sort of the graph and the algorithm that solves this problem is unsurprisingly called [Toposort](Topo-Sort.ipynb) and is actually a very simple algorithm to understand.
 
-
 ## Pathfinding algorithms
 
-There are many path finding algorithms out there. They all come in different flavors. Some are single source shortest path algorithms that find the shortest path from a single vertex to every other vertex in the graph. Others are all-pair shortest paths algorithms which find the shortest path from any vertext to any other vertex in a graph.
+There are many path finding algorithms out there. They all come in different flavors. Some are __single source shortest path algorithms__ that find the shortest path from a single vertex to every other vertex in the graph. Others are __all-pair shortest paths algorithms__ which find the shortest path from any vertex to any other vertex in a graph.
 
+A common path finding algorithm is called [Dijkstra's Algorithm](Dijkstras-Algo.ipynb). Briefly, Dijkstra's algorithm is a single source shortest path algorithm.
 
 Graphs are applicable in so many situations that thousands of algorithms have been developed for them. Algorithms like shortest path, spanning trees, graph traversals, topological sorts and more. 
