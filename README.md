@@ -38,11 +38,11 @@ A graph is called completely connected if every vertex is connected to every oth
 
 <img src="static/complete-graph.png" width="30%"/>
 
-There are two common ways to represent a graph: the __adjacency list__ or the __adjacency matrix__.
+There are two common ways to represent a graph: the __adjacency list__ and the __adjacency matrix__.
 
 The adjacency list is a list/array of the nodes in the graph where each node points to a list of nodes adjacent to it.
 
-The adjacency matrix is a matrix where each row represents a node and each column represents a node. We see in the matrix two nodes, *u* and *v*, are connected if the adj matrix at row *u* column *v* is non-zero. 
+The adjacency matrix is a matrix where each row and column represents a node. For example, looking at row 0 and column 1 of the matrix, we see that there is a non-zero value there, implying an edge connection between the two vertices. In general, we see in the matrix two vertices, *u* and *v*, are connected if the adj matrix at row *u* column *v* is non-zero. 
 
 <p>
     <img src="static/adj-graph.png" width="30%"/>
@@ -50,7 +50,7 @@ The adjacency matrix is a matrix where each row represents a node and each colum
     <img src="static/adj-matrix.png" width="30%"/>
 </p>
 
-In this case the adjacency matrix is symmetric around the main diagonal because the graph is undirected. If the graph had weights then the existence of an edge in the matrix would be represented by its weight instead of just 1.
+In this case, the adjacency matrix is symmetric about the main diagonal because the graph is undirected i.e. if vertices 0 and 2 are connected then the matrix will have a value at row 0 column 2 as well as row 2 column 0. If the graph had weights then the existence of an edge in the matrix would be represented by its weight value instead of 1 and in this case as well the lack of the edge remains as 0.
 
 We will try to implement as many of these algorithms as we can using both the list and matrix representations of the graphs.
 
