@@ -25,9 +25,9 @@ Additionally edges can be weighted which in the case of nav systems can represen
 In graph theory, vertices can be accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A __path__ is sequence of non-repeating vertices connected by unique edges. A __cycle__ is a path where the start and end vertices are the same. Graphs that don't contain any cycle are called __acyclic__. Along with cycles, __circuits__ are a type of cycles where vertices can repeat. The left image displays a path, the middle image is a cycle, and the right image is a circuit.
 
 <p style="text-align: center">
- <img src="static/path-graph.png" title="path" width="30%"/>
- <img src="static/cycle-graph.png" title="cycle" width="30%"/>
- <img src="static/circuit-graph.png" title="circuit" width="30%"/>
+    <img src="static/path-graph.png" title="path" width="30%"/>
+    <img src="static/cycle-graph.png" title="cycle" width="30%"/>
+    <img src="static/circuit-graph.png" title="circuit" width="30%"/>
 </p>
 
 
@@ -64,13 +64,13 @@ Another important topic in graph theory are trees. A tree is an undirected conne
 1. If any edge is removed from the graph, then the graph won't be connected anymore.
 
 <div style="text-align: center">
-<img src="static/simple-tree.png" title="tree" width="30%"/>
+    <img src="static/simple-tree.png" title="tree" width="30%"/>
 </div>
 
 In graph theory, an important topic is finding a spanning tree of a graph. A spanning tree is a minimun set of edges that connects every node in the graph. A graph can only have a spanning tree if it is connected. 
 
 <div style="text-align: center">
-<img src="static/tree-graph.png" title="tree subgraph" width="30%"/>
+    <img src="static/tree-graph.png" title="tree subgraph" width="30%"/>
 </div>
 
 The spanning tree of the graph above consists of only the pink edges and nodes. Spanning trees are vital in any path-finding algorithm such as GPS where finding the shortest path is the goal.
@@ -86,14 +86,14 @@ For many algorithms, especially for digraphs, we need to know the __degree__ of 
 For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
 
 <p style="text-align: center">
-<img src="static/digraph.png" title="digraph" width="30%"/>
-<img src="static/selfloop.png" title="graph with self loop" width="30%"/>
+    <img src="static/digraph.png" title="digraph" width="30%"/>
+    <img src="static/selfloop.png" title="graph with self loop" width="30%"/>
 </p>
 
 One application where digraphs are used is to solve the problem of task scheduling. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prerequisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
 
 <div style="text-align: center">
-<img src="static/clothing-topo.png" title="toposort graph" width="50%"/>
+    <img src="static/clothing-topo.png" title="toposort graph" width="50%"/>
 </div>
 A problem we want to solve is to find a natural ordering of the tasks or in this case, putting on clothes, so that each task done has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* or there is a directed path from *u* to *v* in the graph then *u* preceeds *v* in the ordering.
 
