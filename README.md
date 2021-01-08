@@ -38,7 +38,7 @@ A graph is called connected if there exists a path between every pair of vertice
 A graph is called completely connected if every vertex is connected to every other vertex by a single edge.
 
 <div style="text-align: center">
-<img src="static/complete-graph.png" width="30%"/>
+<img src="static/complete-graph.png" title="completely connected graph" width="30%"/>
 </div>
 There are two common ways to represent a graph: the __adjacency list__ and the __adjacency matrix__.
 
@@ -47,9 +47,9 @@ The adjacency list is a list/array of the nodes in the graph where each node poi
 The adjacency matrix is a matrix where each row and column represents a node. For example, looking at row 0 and column 1 of the matrix, we see that there is a non-zero value there, implying an edge connection between the two vertices. In general, we see in the matrix two vertices, *u* and *v*, are connected if the adj matrix at row *u* column *v* is non-zero. 
 
 <p style="text-align: center">
-    <img src="static/adj-graph.png" width="30%"/>
-    <img src="static/adj-list.png" width="30%"/>
-    <img src="static/adj-matrix.png" width="30%"/>
+    <img src="static/adj-graph.png" title="graph" width="30%"/>
+    <img src="static/adj-list.png" title="adjacency list" width="30%"/>
+    <img src="static/adj-matrix.png" title="adjacency matrix" width="30%"/>
 </p>
 
 In this case, the adjacency matrix is symmetric about the main diagonal because the graph is undirected i.e. if vertices 0 and 2 are connected then the matrix will have a value at row 0 column 2 as well as row 2 column 0. If the graph had weights then the existence of an edge in the matrix would be represented by its weight value instead of 1 and in this case as well the lack of the edge remains as 0.
@@ -64,13 +64,13 @@ Another important topic in graph theory are trees. A tree is an undirected conne
 1. If any edge is removed from the graph, then the graph won't be connected anymore.
 
 <div style="text-align: center">
-<img src="static/simple-tree.png" width="30%"/>
+<img src="static/simple-tree.png" title="tree" width="30%"/>
 </div>
 
 In graph theory, an important topic is finding a spanning tree of a graph. A spanning tree is a minimun set of edges that connects every node in the graph. A graph can only have a spanning tree if it is connected. 
 
 <div style="text-align: center">
-<img src="static/tree-graph.png" width="30%"/>
+<img src="static/tree-graph.png" title="tree subgraph" width="30%"/>
 </div>
 
 The spanning tree of the graph above consists of only the pink edges and nodes. Spanning trees are vital in any path-finding algorithm such as GPS where finding the shortest path is the goal.
@@ -86,14 +86,14 @@ For many algorithms, especially for digraphs, we need to know the __degree__ of 
 For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
 
 <p style="text-align: center">
-<img src="static/digraph.png" width="30%"/>
-<img src="static/selfloop.png" width="30%"/>
+<img src="static/digraph.png" title="digraph" width="30%"/>
+<img src="static/selfloop.png" title="graph with self loop" width="30%"/>
 </p>
 
 One application where digraphs are used is to solve the problem of task scheduling. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prerequisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
 
 <div style="text-align: center">
-<img src="static/clothing-topo.png" width="50%"/>
+<img src="static/clothing-topo.png" title="toposort graph" width="50%"/>
 </div>
 A problem we want to solve is to find a natural ordering of the tasks or in this case, putting on clothes, so that each task done has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* or there is a directed path from *u* to *v* in the graph then *u* preceeds *v* in the ordering.
 
