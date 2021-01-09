@@ -24,7 +24,7 @@ Additionally edges can be weighted which in the case of nav systems can represen
 
 In graph theory, vertices can be accessed by computing a graph traversal. A graph traversal is an algorithm that "visits" each vertex in the graph. All types of traversal gives a specific order in which each vertex is visited. Two simple types of traversals in a graph are paths and cycles. A __path__ is sequence of non-repeating vertices connected by unique edges. A __cycle__ is a path where the start and end vertices are the same and each vertex on the path is unique. Graphs that don't contain any cycle are called __acyclic__. Along with cycles, __circuits__ are a type of cycle where vertices can repeat on the path. The left image displays a path, the middle image is a cycle, and the right image is a circuit.
 
-<p style="text-align: center">
+<p>
     <img src="static/path-graph.png" title="path" width="30%"/>
     <img src="static/cycle-graph.png" title="cycle" width="30%"/>
     <img src="static/circuit-graph.png" title="circuit" width="30%"/>
@@ -35,7 +35,7 @@ An important property of graphs to discuss before further discussing traversals 
 
 A graph is __connected__ if there exists a path between every pair of vertices in the graph and is __completely connected__ if every vertex is connected to every other vertex by a single edge.
 
-<div style="text-align: center">
+<div>
     <img src="static/connected-graph.png" title="connected graph" width="30%"/>
     <img src="static/complete-graph.png" title="completely connected graph" width="30%"/>
 </div>
@@ -46,7 +46,7 @@ The adjacency list is a list/array of the nodes in the graph where each node poi
 
 The adjacency matrix is a matrix where each row and column represents a node. For example, looking at row 0 and column 1 of the matrix, we see that there is a non-zero value there, implying an edge connection between the two vertices. In general, we see in the matrix two vertices, *u* and *v*, are connected if the adj matrix at row *u* column *v* is non-zero. 
 
-<p style="text-align: center">
+<p>
     <img src="static/adj-graph.png" title="graph" width="30%"/>
     <img src="static/adj-list.png" title="adjacency list" width="30%"/>
     <img src="static/adj-matrix.png" title="adjacency matrix" width="30%"/>
@@ -63,13 +63,13 @@ Another important topic in graph theory are trees. A tree is an undirected conne
 1. For every two vertices there is a unique path between them.
 1. If any edge is removed from the graph, then the graph won't be connected anymore.
 
-<div style="text-align: center">
+<div>
     <img src="static/simple-tree.png" title="tree" width="30%"/>
 </div>
 
 In graph theory, an important topic is finding a spanning tree of a graph. A spanning tree is a minimun set of edges that connects every node in the graph. A graph can only have a spanning tree if it is connected. 
 
-<div style="text-align: center">
+<div>
     <img src="static/tree-graph.png" title="tree subgraph" width="30%"/>
 </div>
 
@@ -85,14 +85,14 @@ For many algorithms, especially for digraphs, we need to know the __degree__ of 
 
 For example in the graphs below node 3 (left) has an in-degree of 2 and an out-degree of 1 while node 5 (right) has a degree of 5.
 
-<p style="text-align: center">
+<p>
     <img src="static/digraph.png" title="digraph" width="30%"/>
     <img src="static/selfloop.png" title="graph with self loop" width="30%"/>
 </p>
 
 One application where digraphs are used is to solve the problem of task scheduling. Let's say you have a bunch of tasks to do and you can't do one task before doing the necessary tasks before it. Each task can be a node. We say a node *u* points to node *v* if task *u* must be executed before task *v*. This can be applied to choosing the order of which classes to take given that some classes are necessary prerequisites of others. We can even apply digraphs to putting clothes on in the morning; you can't put your shoes on before your socks.
 
-<div style="text-align: center">
+<div>
     <img src="static/clothing-topo.png" title="toposort graph" width="50%"/>
 </div>
 A problem we want to solve is to find a natural ordering of the tasks or in this case, putting on clothes, so that each task done has no unfulfilled prerequisites. Meaning, for every two nodes *u* and *v*, if node *u* points directly to node *v* or there is a directed path from *u* to *v* in the graph then *u* preceeds *v* in the ordering.
