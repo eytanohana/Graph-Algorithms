@@ -1,5 +1,8 @@
+import os
 import networkx as nx
 import matplotlib.pyplot as plt
+import imageio
+from IPython.display import Image
 
 
 def clear_marks(G):
@@ -62,3 +65,50 @@ def draw_graph(G, with_labels=True, with_tree=True, ax=None):
         ax.axis('off')
     plt.axis('off')
     
+    
+def animate_euler(G, circ):
+    pos = nx.spring_layout(G)
+    fig, ax = plt.subplots()
+
+    nx.draw_networkx_nodes(G, pos,
+                           nodelist=G.nodes,
+                           node_color='#00bbff',
+                           ax=ax)
+    
+    nx.draw_networkx_edges(G, pos,
+                           edgelist=G.edges,
+                           ax=ax)
+    labels = {n: n for n in G.nodes}
+    nx.draw_networkx_labels(G, pos, labels, font_size=14, ax=ax)
+    ax.axis('off')
+    plt.savefig('.tmp0.png')
+    tmp_files = ['.tmp0.png']
+    marked_edges = []
+    for i, edge in enumerate(zip(circ, circ[1:]), 1):
+        marked_edges.append(edge)
+        unmarked_edges = list(set(G.edges) - set(marked_edges) - set(e[::-1] for e in marked_edges))
+        ax.clear()
+        nx.draw_networkx_nodes(G, pos,
+                               nodelist=G.nodes,
+                               node_color='#00bbff',
+                               ax=ax)
+        nx.draw_networkx_edges(G, pos,
+                               edgelist=marked_edges,
+                               edge_color ='#b300ff',
+                               ax=ax)
+        nx.draw_networkx_edges(G, pos,
+                               edgelist=unmarked_edges,
+                               ax=ax)
+        nx.draw_networkx_labels(G, pos, labels, font_size=14, ax=ax)
+        ax.axis('off')
+        tmp_files.append(f'.tmp{i}.png')
+        plt.savefig(tmp_files[-1])
+    ax.remove()
+    with imageio.get_writer('euler.gif', mode='I') as writer:
+        for file in tmp_files:
+            image = imageio.imread(file)
+            for _ in range(5):
+                writer.append_data(image)
+            os.remove(file)
+        
+    return Image(url='euler.gif') 
