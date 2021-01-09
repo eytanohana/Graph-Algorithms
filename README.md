@@ -33,7 +33,7 @@ In graph theory, vertices can be accessed by computing a graph traversal. A grap
 
 An important property of graphs to discuss before further discussing traversals is the concept of __graph connectivity__. We say two vertices *u* and *v* are connected if there exists a path between them.
 
-A graph is __connected__ if there exists a path between every pair of vertices in the graph and is __completely connected__ if every vertex is connected to every other vertex by a single edge.
+A graph is __connected__ if there exists a path between every pair of vertices in the graph and is __completely connected__, or __complete__ for short, if every vertex is connected to every other vertex by a single edge.
 
 <p>
     <img src="static/connected-graph.png" title="connected graph" width="30%"/>
