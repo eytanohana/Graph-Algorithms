@@ -94,7 +94,7 @@ def animate_euler(G, circ):
                                ax=ax)
         nx.draw_networkx_edges(G, pos,
                                edgelist=marked_edges,
-                               edge_color ='#b300ff',
+                               edge_color ='#b300f0',
                                ax=ax)
         nx.draw_networkx_edges(G, pos,
                                edgelist=unmarked_edges,
@@ -111,4 +111,4 @@ def animate_euler(G, circ):
                 writer.append_data(image)
             os.remove(file)
         
-    return Image(url='euler.gif') 
+    return Image(url='euler.gif')
