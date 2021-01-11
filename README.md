@@ -35,6 +35,12 @@ An __Euler Path__ is a path where every *edge* in the graph is used exactly once
 
 A __Hamiltonian Path__ is a path where every *vertex* in the graph is used once. A __Hamiltonian Cycle__ is a hamiltonian path except again where the start is the same as the end.
 
+Intuitively, the solutions for both problems seem very closely related, but in reality they could not be more different. The problem of finding an euler path or cycle is an easily solved problem with a fairly efficient runtime. Check out [Euler-Circuits](Euler-Circuits.ipynb) to see how we can find an euler circuit in a graph.
+
+Finding hamiltonian paths or cycles on the other hand has no known efficient solution. It belongs to a class of problems known as NP-complete. Basically meaning we can't do much better than brute force the solution.
+
+
+
 
 An important property of graphs to discuss before further discussing traversals is the concept of __graph connectivity__. We say two vertices *u* and *v* are connected if there exists a path between them.
 
