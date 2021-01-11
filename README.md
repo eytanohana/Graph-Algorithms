@@ -31,6 +31,7 @@ In graph theory, vertices can be accessed by computing a graph traversal. A grap
     <img src="static/circuit-graph.png" title="circuit" width="30%"/>
 </p>
 
+An __Euler Path__ is a path where every edge in the graph is used exactly once, while an __Euler Cycle__ (or Euler Circuit) is an euler path where the start vertex is equal to the end vertex.
 
 An important property of graphs to discuss before further discussing traversals is the concept of __graph connectivity__. We say two vertices *u* and *v* are connected if there exists a path between them.
 
