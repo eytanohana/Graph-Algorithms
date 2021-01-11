@@ -11,6 +11,7 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Grap
 - [Depth First Search](DFS.ipynb)
 - [Topological Sort](Topo-Sort.ipynb)
 - [Dijkstra's Algorithm](Dijkstras-Algo.ipynb)
+- [Euler Circuits](Euler-Circuits.ipynb)
 
 A graph is a type of data structure that is represented by a set of nodes/vertices and edges. 
 
