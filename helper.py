@@ -69,7 +69,7 @@ def draw_graph(G, with_labels=True, with_tree=True, ax=None):
     plt.axis('off')
     
     
-def animate_euler(G, circ):
+def animate_euler(G, circ, name='euler'):
     pos = nx.spring_layout(G)
     fig, ax = plt.subplots()
 
@@ -113,11 +113,11 @@ def animate_euler(G, circ):
         tmp_files.append(f'.tmp{i}.png')
         plt.savefig(tmp_files[-1])
     ax.remove()
-    with imageio.get_writer('euler.gif', mode='I') as writer:
+    with imageio.get_writer(f'static/euler-gifs/{name}.gif', mode='I') as writer:
         for file in tmp_files:
             image = imageio.imread(file)
             for _ in range(5):
                 writer.append_data(image)
             os.remove(file)
         
-    return Image(url='euler.gif')
+    return Image(url=f'static/euler-gifs/{name}.gif')
