@@ -1,3 +1,7 @@
+Add animations for bfs / dfs
+Add directed graphs to bfs / dfs
+
+
 README content:
     * single shortest path
     * Dijkstras Algo  -- use functions, create random graphs (directed, weighted/unweighted)
@@ -18,4 +22,4 @@ Algorithms to implement:
     - Bellman-Ford
     - DAG - shortest path (put with toposort maybe)
     
-    
+
