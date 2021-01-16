@@ -31,6 +31,7 @@ def draw_graph(G, with_labels=True, with_tree=True, ax=None):
                             edgelist=marked_edges,
                             edge_color='#FF00FF',
                             width=2,
+                            connectionstyle='arc3, rad = 0.1',
                             ax=ax)
     
         nx.draw_networkx_nodes(G, pos,
@@ -43,6 +44,7 @@ def draw_graph(G, with_labels=True, with_tree=True, ax=None):
                                edgelist=unmarked_edges,
                                edge_color='k',
                                width=1,
+                               connectionstyle='arc3, rad = 0.1',
                                ax=ax)
     else:
         nx.draw_networkx_nodes(G, pos,
@@ -55,6 +57,7 @@ def draw_graph(G, with_labels=True, with_tree=True, ax=None):
                                edgelist=unmarked_edges + marked_edges,
                                edge_color='k',
                                width=1,
+                               connectionstyle='arc3, rad = 0.1',
                                ax=ax)
     
     if with_labels:
@@ -77,6 +80,7 @@ def animate_euler(G, circ):
     
     nx.draw_networkx_edges(G, pos,
                            edgelist=G.edges,
+                           connectionstyle='arc3, rad = 0.1',
                            ax=ax)
     labels = {n: n for n in G.nodes}
     nx.draw_networkx_labels(G, pos, labels, font_size=14, ax=ax)
@@ -95,9 +99,11 @@ def animate_euler(G, circ):
         nx.draw_networkx_edges(G, pos,
                                edgelist=marked_edges,
                                edge_color ='#b300f0',
+                               connectionstyle='arc3, rad = 0.1',
                                ax=ax)
         nx.draw_networkx_edges(G, pos,
                                edgelist=unmarked_edges,
+                               connectionstyle='arc3, rad = 0.1',
                                ax=ax)
         nx.draw_networkx_labels(G, pos, labels, font_size=14, ax=ax)
         ax.axis('off')
