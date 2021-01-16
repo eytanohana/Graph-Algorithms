@@ -90,7 +90,10 @@ def animate_euler(G, circ):
     marked_edges = []
     for i, edge in enumerate(zip(circ, circ[1:]), 1):
         marked_edges.append(edge)
-        unmarked_edges = list(set(G.edges) - set(marked_edges) - set(e[::-1] for e in marked_edges))
+        if isinstance(G, nx.DiGraph):
+            unmarked_edges = set(G.edges) - set(marked_edges)
+        else: 
+             unmarked_edges = set(G.edges) - set(marked_edges) - set(e[::-1] for e in marked_edges)
         ax.clear()
         nx.draw_networkx_nodes(G, pos,
                                nodelist=G.nodes,
