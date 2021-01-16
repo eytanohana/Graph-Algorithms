@@ -119,5 +119,7 @@ def animate_graph(G, edges, name):
             for _ in range(5):
                 writer.append_data(image)
             os.remove(file)
+        for _ in range(10):
+            writer.append_data(image)
         
     return Image(url=f'static/{name}')
