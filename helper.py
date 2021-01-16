@@ -88,12 +88,12 @@ def animate_graph(G, edges, name):
     plt.savefig('.tmp0.png')
     tmp_files = ['.tmp0.png']
     marked_edges = []
-    for i, edge in enumerate(edges):
+    for i, edge in enumerate(edges, 1):
         marked_edges.append(edge)
         if isinstance(G, nx.DiGraph):
             unmarked_edges = set(G.edges) - set(marked_edges)
         else: 
-             unmarked_edges = set(G.edges) - set(marked_edges) - set(reversed(marked_edges))
+            unmarked_edges = set(G.edges) - set(marked_edges) - set(e[::-1] for e in marked_edges)
         ax.clear()
         nx.draw_networkx_nodes(G, pos,
                                nodelist=G.nodes,
@@ -120,4 +120,4 @@ def animate_graph(G, edges, name):
                 writer.append_data(image)
             os.remove(file)
         
-    return Image(url=f'static/euler-gifs/{name}.gif')
+    return Image(url=f'static/{name}')
