@@ -69,7 +69,7 @@ def draw_graph(G, with_labels=True, with_tree=True, ax=None):
     plt.axis('off')
     
     
-def animate_euler(G, circ, name='euler'):
+def animate_graph(G, edges, name):
     pos = nx.spring_layout(G)
     fig, ax = plt.subplots()
 
@@ -88,12 +88,12 @@ def animate_euler(G, circ, name='euler'):
     plt.savefig('.tmp0.png')
     tmp_files = ['.tmp0.png']
     marked_edges = []
-    for i, edge in enumerate(zip(circ, circ[1:]), 1):
+    for i, edge in enumerate(edges, 1):
         marked_edges.append(edge)
         if isinstance(G, nx.DiGraph):
             unmarked_edges = set(G.edges) - set(marked_edges)
         else: 
-             unmarked_edges = set(G.edges) - set(marked_edges) - set(e[::-1] for e in marked_edges)
+            unmarked_edges = set(G.edges) - set(marked_edges) - set(e[::-1] for e in marked_edges)
         ax.clear()
         nx.draw_networkx_nodes(G, pos,
                                nodelist=G.nodes,
@@ -113,11 +113,13 @@ def animate_euler(G, circ, name='euler'):
         tmp_files.append(f'.tmp{i}.png')
         plt.savefig(tmp_files[-1])
     ax.remove()
-    with imageio.get_writer(f'static/euler-gifs/{name}.gif', mode='I') as writer:
+    with imageio.get_writer(f'static/{name}', mode='I') as writer:
         for file in tmp_files:
             image = imageio.imread(file)
             for _ in range(5):
                 writer.append_data(image)
             os.remove(file)
+        for _ in range(10):
+            writer.append_data(image)
         
-    return Image(url=f'static/euler-gifs/{name}.gif')
+    return Image(url=f'static/{name}')
