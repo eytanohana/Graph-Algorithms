@@ -1,4 +1,4 @@
-# Graph-Algorithms
+# Graph-Algorithms   
 
 This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Graph-Algorithms) and [Osher Boudara](https://github.com/osherboudara99/Graph-Algorithms) to implement and visualize various graph algorithms.
 
