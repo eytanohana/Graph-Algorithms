@@ -11,6 +11,7 @@ This is a collaboration between [Eytan Ohana](https://github.com/eytanohana/Grap
 - [Depth First Search](DFS.ipynb)
 - [Topological Sort](Topo-Sort.ipynb)
 - [Dijkstra's Algorithm](Dijkstras-Algo.ipynb)
+- [Euler Circuits](Euler-Circuits.ipynb)
 
 A graph is a type of data structure that is represented by a set of nodes/vertices and edges. 
 
@@ -29,6 +30,16 @@ In graph theory, vertices can be accessed by computing a graph traversal. A grap
     <img src="static/cycle-graph.png" title="cycle" width="30%"/>
     <img src="static/circuit-graph.png" title="circuit" width="30%"/>
 </p>
+
+An __Euler Path__ is a path where every *edge* in the graph is used exactly once, while an __Euler Cycle__ (or Euler Circuit) is an euler path where the start vertex is equal to the end vertex.
+
+A __Hamiltonian Path__ is a path where every *vertex* in the graph is used once. A __Hamiltonian Cycle__ is a hamiltonian path except again where the start is the same as the end.
+
+Intuitively, the solutions for both problems seem very closely related, but in reality they could not be more different. The problem of finding an euler path or cycle is an easily solved problem with a fairly efficient runtime. Check out [Euler-Circuits](Euler-Circuits.ipynb) to see how we can find an euler circuit in a graph.
+
+Finding hamiltonian paths or cycles on the other hand has no known efficient solution. It belongs to a class of problems known as NP-complete. Basically meaning we can't do much better than brute force the solution.
+
+
 
 
 An important property of graphs to discuss before further discussing traversals is the concept of __graph connectivity__. We say two vertices *u* and *v* are connected if there exists a path between them.
