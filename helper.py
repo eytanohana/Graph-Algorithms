@@ -1,5 +1,6 @@
 import os
 import networkx as nx
+import numpy as np
 import matplotlib.pyplot as plt
 import imageio
 from IPython.display import Image
@@ -100,7 +101,7 @@ def animate_graph(G, edges, name):
                                node_color='#00bbff',
                                ax=ax)
         nx.draw_networkx_edges(G, pos,
-                               edgelist=marked_edges,
+                               edgelist=marearked_edges,
                                edge_color ='#b300f0',
                                connectionstyle='arc3, rad = 0.1',
                                ax=ax)
@@ -123,3 +124,18 @@ def animate_graph(G, edges, name):
             writer.append_data(image)
         
     return Image(url=f'static/{name}')
+
+
+def generate_random_dag(num_nodes, weight_range=(0,3)):
+    """
+    Generate a random directed acyclic graph.
+    
+    We do this by generating a random adjacency matrix
+    and turning it into a lower diagonal matrix. It's guaranteed that 
+    all lower (or upper) diagonal matrices represent directed acyclic
+    graphs.
+    """
+    low, high = weight_range
+    random_adj_matrix = np.random.randint(low, high, size=(num_nodes, num_nodes))
+    dag_adj_matrix = np.tril(random_adj_matrix, k=-1)
+    return nx.convert_matrix.from_numpy_matrix(dag_adj_matrix, create_using=nx.DiGraph)
