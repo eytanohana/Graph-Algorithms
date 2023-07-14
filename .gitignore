@@ -133,3 +133,5 @@ dmypy.json
 temp.ipynb
 .gitattributes
 Untitled.ipynb
+.idea/
+.gitattributes
