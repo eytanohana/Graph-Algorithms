@@ -1,4 +1,4 @@
-name: graph-algos2
+name: graph-algos
 channels:
   - conda-forge
   - defaults
@@ -17,3 +17,7 @@ dependencies:
   - matplotlib-base=3.7.2
   - matplotlib-inline=0.1.6
   - streamlit=1.25.0
+  - jupyterlab=4.0.5
+  - jupyterlab_pygments=0.2.2
+  - jupyterlab_server=2.24.0
+  - jupyterlab_widgets=3.0.8
